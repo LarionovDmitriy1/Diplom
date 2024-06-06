@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientQ.Designer.cs">
+      <DependentUpon>ClientQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Database.resx">
       <DependentUpon>Database.cs</DependentUpon>
     </EmbeddedResource>

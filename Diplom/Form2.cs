@@ -56,20 +56,20 @@ namespace Diplom
                 number.Clear();
                 return;
             }
-            
+
         }
         private string RandomNumber()
         {
             string num = "asd";
             Random randomNumber = new Random();
-            int num1 = randomNumber.Next(1,101);
+            int num1 = randomNumber.Next(1, 101);
             num = num1.ToString();
             if (!list.Contains(num))
             {
                 list.Add(num);
                 return num;
             }
-            else if(list.Count == 100)
+            else if (list.Count == 100)
             {
                 return "0";
             }

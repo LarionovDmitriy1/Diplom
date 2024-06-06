@@ -56,15 +56,15 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(346, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 21);
+            this.label1.Size = new System.Drawing.Size(127, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Введите ФИО";
+            this.label1.Text = "Введите логин";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 159);
+            this.label2.Location = new System.Drawing.Point(347, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 3;
