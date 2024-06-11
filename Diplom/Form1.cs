@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,7 +14,10 @@ namespace Diplom
 {
     public partial class Form1 : Form
     {
-        List<string> list = new List<string>();
+        int count = 0;
+        private static int count3=0;
+        static List<string> log = new List<string>();
+        static List<string> list = new List<string>();
         private Form2 newForm;
         private static ClientQ clientQ;
         private static Authorization auth;
@@ -26,12 +30,12 @@ namespace Diplom
 
         private void Registration_Click(object sender, EventArgs e)
         {
-            int count = 0;
             if (count == 0)
             {
                 newForm = new Form2();
-                newForm.Show();
                 count++;
+                newForm.Show();
+               
             }
             else
             {
@@ -70,13 +74,16 @@ namespace Diplom
                 string value = database.dataGridView1.Rows[rows].Cells[0].Value.ToString();
                 string value1 = database.dataGridView1.Rows[rows].Cells[1].Value.ToString();
                 string value2 = database.dataGridView1.Rows[rows].Cells[2].Value.ToString();
+                count3++;
                 if (auth.login.Text == value)
                 {
-
                     if (auth.pass.Text == value1)
                     {
                         if (auth.room.Text == value2)
                         {
+                            log.Add(value);
+                            log.Add(value1);
+                            log.Add(value2);
                             count2++;
                             break;
                         }
@@ -88,12 +95,21 @@ namespace Diplom
             if(count2 != 0)
             {
                 clientQ = new ClientQ();
+                auth.Visible = false;
                 clientQ.Show();
             }
             else
             {
                 MessageBox.Show("Вы ввели неверные данные");
             }
+        }
+        public static void Leave()
+        {
+            database.dataGridView1.Rows.RemoveAt(count3-1);
+            list.RemoveAt(count3 - 1);
+            MessageBox.Show("Вы съехали с номера");
+            count3 = 0;
+            clientQ.Close();
         }
     }
 }
