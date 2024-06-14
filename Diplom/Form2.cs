@@ -50,7 +50,7 @@ namespace Diplom
             }
             else
             {
-                MessageBox.Show("Такой человек уже зарегистрирован в гостиннице");
+                MessageBox.Show("Такой человек уже зарегистрирован в гостинице");
                 this.Visible = false;
                 full_name.Clear();
                 number.Clear();

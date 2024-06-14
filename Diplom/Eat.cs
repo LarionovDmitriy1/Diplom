@@ -62,7 +62,7 @@ namespace Diplom
 
         private void confirm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Вы заказали в номер - {countEat} порций еды, {countWater} напитков и {countAlcho} коктелей");
+            MessageBox.Show($"Вы заказали в номер - {countEat} порции еды, {countWater} напитка и {countAlcho} коктеля");
             this.Close();
             client = new ClientQ();
             client.Visible = true;
