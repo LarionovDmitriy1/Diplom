@@ -28,7 +28,6 @@ namespace Diplom
         private void eat_Click(object sender, EventArgs e)
         {
             eater.Show();
-            this.Visible = false;
         }
 
         private void cleaning_Click(object sender, EventArgs e)

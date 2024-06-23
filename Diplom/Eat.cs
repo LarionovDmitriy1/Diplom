@@ -64,8 +64,6 @@ namespace Diplom
         {
             MessageBox.Show($"Вы заказали в номер - {countEat} порции еды, {countWater} напитка и {countAlcho} коктеля");
             this.Close();
-            client = new ClientQ();
-            client.Visible = true;
         }
     }
 }

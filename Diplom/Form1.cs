@@ -107,9 +107,10 @@ namespace Diplom
         {
             database.dataGridView1.Rows.RemoveAt(count3-1);
             list.RemoveAt(count3 - 1);
+            clientQ.Close();
             MessageBox.Show("Вы съехали с номера");
             count3 = 0;
-            clientQ.Close();
+            
         }
     }
 }
